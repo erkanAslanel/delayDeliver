@@ -1,0 +1,197 @@
+<classpath>
+  <classpathentry kind="src" path="src/main/scala"/>
+  <classpathentry kind="src" path="src/test/scala"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"></classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http_2.12/srcs/akka-http_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http_2.12/jars/akka-http_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http_2.12/docs/akka-http_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/srcs/akka-http-core_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/jars/akka-http-core_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/docs/akka-http-core_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-parsing_2.12/srcs/akka-parsing_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-parsing_2.12/jars/akka-parsing_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-parsing_2.12/docs/akka-parsing_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-spray-json_2.12/srcs/akka-http-spray-json_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-spray-json_2.12/jars/akka-http-spray-json_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-spray-json_2.12/docs/akka-http-spray-json_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/io.spray/spray-json_2.12/srcs/spray-json_2.12-1.3.5-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/io.spray/spray-json_2.12/jars/spray-json_2.12-1.3.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/io.spray/spray-json_2.12/docs/spray-json_2.12-1.3.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-xml_2.12/srcs/akka-http-xml_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-xml_2.12/jars/akka-http-xml_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-xml_2.12/docs/akka-http-xml_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.2.0-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/docs/scala-xml_2.12-1.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/srcs/akka-stream_2.12-2.5.25-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/jars/akka-stream_2.12-2.5.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/docs/akka-stream_2.12-2.5.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/srcs/akka-actor_2.12-2.5.25-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/jars/akka-actor_2.12-2.5.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/docs/akka-actor_2.12-2.5.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe/config/srcs/config-1.3.3-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe/config/bundles/config-1.3.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe/config/docs/config-1.3.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.12/srcs/akka-protobuf_2.12-2.5.25-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.12/jars/akka-protobuf_2.12-2.5.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-protobuf_2.12/docs/akka-protobuf_2.12-2.5.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.reactivestreams/reactive-streams/srcs/reactive-streams-1.0.2-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.reactivestreams/reactive-streams/docs/reactive-streams-1.0.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe/ssl-config-core_2.12/srcs/ssl-config-core_2.12-0.3.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe/ssl-config-core_2.12/bundles/ssl-config-core_2.12-0.3.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe/ssl-config-core_2.12/docs/ssl-config-core_2.12-0.3.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/srcs/scala-parser-combinators_2.12-1.1.2-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/docs/scala-parser-combinators_2.12-1.1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-ahc-ws-standalone_2.12/srcs/play-ahc-ws-standalone_2.12-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-ahc-ws-standalone_2.12/jars/play-ahc-ws-standalone_2.12-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-ahc-ws-standalone_2.12/docs/play-ahc-ws-standalone_2.12-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone_2.12/srcs/play-ws-standalone_2.12-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone_2.12/jars/play-ws-standalone_2.12-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone_2.12/docs/play-ws-standalone_2.12-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/javax.inject/javax.inject/srcs/javax.inject-1-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/javax.inject/javax.inject/docs/javax.inject-1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.12/srcs/scala-java8-compat_2.12-0.9.0-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.12/jars/scala-java8-compat_2.12-0.9.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.12/docs/scala-java8-compat_2.12-0.9.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/cachecontrol_2.12/srcs/cachecontrol_2.12-1.1.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/cachecontrol_2.12/jars/cachecontrol_2.12-1.1.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/cachecontrol_2.12/docs/cachecontrol_2.12-1.1.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.joda/joda-convert/srcs/joda-convert-1.9.2-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.9.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.joda/joda-convert/docs/joda-convert-1.9.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.26-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.26.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.slf4j/slf4j-api/docs/slf4j-api-1.7.26-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/shaded-asynchttpclient/srcs/shaded-asynchttpclient-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/shaded-asynchttpclient/jars/shaded-asynchttpclient-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/shaded-asynchttpclient/docs/shaded-asynchttpclient-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/shaded-oauth/srcs/shaded-oauth-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/shaded-oauth/jars/shaded-oauth-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/shaded-oauth/docs/shaded-oauth-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-json_2.12/srcs/play-ws-standalone-json_2.12-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-json_2.12/jars/play-ws-standalone-json_2.12-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-json_2.12/docs/play-ws-standalone-json_2.12-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-json_2.12/srcs/play-json_2.12-2.7.4-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-json_2.12/jars/play-json_2.12-2.7.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-json_2.12/docs/play-json_2.12-2.7.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-functional_2.12/srcs/play-functional_2.12-2.7.4-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-functional_2.12/jars/play-functional_2.12-2.7.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-functional_2.12/docs/play-functional_2.12-2.7.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/joda-time/joda-time/srcs/joda-time-2.10.1-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.10.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/joda-time/joda-time/docs/joda-time-2.10.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.9.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/docs/jackson-core-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.9.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/docs/jackson-annotations-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.9.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/docs/jackson-databind-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/srcs/jackson-datatype-jdk8-2.9.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/docs/jackson-datatype-jdk8-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/srcs/jackson-datatype-jsr310-2.9.8-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/docs/jackson-datatype-jsr310-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-xml_2.12/srcs/play-ws-standalone-xml_2.12-2.0.7-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-xml_2.12/jars/play-ws-standalone-xml_2.12-2.0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.play/play-ws-standalone-xml_2.12/docs/play-ws-standalone-xml_2.12-2.0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-testkit_2.12/srcs/akka-http-testkit_2.12-10.1.10-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-testkit_2.12/jars/akka-http-testkit_2.12-10.1.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-http-testkit_2.12/docs/akka-http-testkit_2.12-10.1.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-testkit_2.12/srcs/akka-testkit_2.12-2.5.25-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-testkit_2.12/jars/akka-testkit_2.12-2.5.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-testkit_2.12/docs/akka-testkit_2.12-2.5.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream-testkit_2.12/srcs/akka-stream-testkit_2.12-2.5.25-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream-testkit_2.12/jars/akka-stream-testkit_2.12-2.5.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/com.typesafe.akka/akka-stream-testkit_2.12/docs/akka-stream-testkit_2.12-2.5.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.5-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.scalatest/scalatest_2.12/docs/scalatest_2.12-3.0.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="/home/erkan/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.5-sources.jar" kind="lib" path="/home/erkan/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:/home/erkan/.ivy2/cache/org.scalactic/scalactic_2.12/docs/scalactic_2.12-3.0.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="output" path="bin"/>
+</classpath>
