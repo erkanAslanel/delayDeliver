@@ -21,7 +21,8 @@ lazy val root = (project in file(".")).
       
       "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.0.7",
       "com.typesafe.play" %% "play-ws-standalone-json" % "2.0.7",
-      "com.typesafe.play" %% "play-ws-standalone-xml" % "2.0.7"
+      "com.typesafe.play" %% "play-ws-standalone-xml" % "2.0.7",
+	  "ch.qos.logback" % "logback-classic" % "1.1.3" % Runtime
     )
     
 
