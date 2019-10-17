@@ -27,7 +27,20 @@ class QueueCreator(implicit val materializer: ActorMaterializer) extends Actor {
     case _ => { println("I don't know what are you talking about") }
 
   }
-} 
+}
+
+class QueueRabbitMqProxy extends Actor {
+
+  override def receive: Receive = {
+
+    case QueueCommands.QueuePostRabbitMqCommand(username: String, password: String, queueName: String, exprire: String) =>
+
+      println(s"QueuePostRabbitMqCommand recived")
+
+      println(s"username $username")
+
+  }
+}
 
 
 

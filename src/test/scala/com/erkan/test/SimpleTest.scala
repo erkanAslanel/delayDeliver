@@ -1,24 +1,31 @@
 package com.erkan.test
 
-import com.erkan.{ QueueCreator, QueueCommands }
-import akka.actor.{ Actor, ActorSystem, Props }
+import com.erkan._
+import akka.actor._
+import akka.stream.ActorMaterializer
 import akka.testkit.{ ImplicitSender, TestKit }
 import org.scalatest.{ BeforeAndAfterAll, Matchers, WordSpecLike }
+import scala.concurrent.duration._
 
 class SimpleTest extends TestKit(ActorSystem("TestSpec")) with WordSpecLike with Matchers with BeforeAndAfterAll {
   override def afterAll {
-    TestKit.shutdownActorSystem(system)
+    TestKit.shutdownActorSystem(system,  verifySystemShutdown = false)
+
   }
+
+
 
   "Queue actor" must {
 
     "create queue" in {
 
-      val sumActor = system.actorOf(Props(classOf[QueueCreator]), "summingactor")
+      val actor = system.actorOf(Props(classOf[QueueCreator]),"test")
 
-      sumActor ! QueueCommands.QueueCreateCommand
+      actor ! QueueCommands.QueueCreateCommand
 
     }
+
+   
   }
 
 }
