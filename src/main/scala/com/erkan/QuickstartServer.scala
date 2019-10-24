@@ -1,7 +1,7 @@
 package com.erkan
 
 import scala.concurrent.ExecutionContext
-
+import com.erkan.Commands._
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.actor.Props
@@ -13,9 +13,9 @@ object QuickstartServer extends App {
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContext = actorSystem.dispatcher
 
-  val actor2 = actorSystem.actorOf(Props[QueueRabbitMqProxy], "summingactor")
+   val actor2 = actorSystem.actorOf(Props[com.erkan.QueueRabbitMqProxyActor], "summingactor")
 
-  actor2 ! QueueCommands.QueuePostRabbitMqCommand("test", "test2", "test3", 10, "test")
+   actor2 ! RabbitMqProxyCommands.QueuePostRabbitMqCommand("test", "test2", "test3", 10, "test")
 
 }
  

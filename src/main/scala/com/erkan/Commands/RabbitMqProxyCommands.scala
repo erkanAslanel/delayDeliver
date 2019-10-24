@@ -1,12 +1,8 @@
-package com.erkan
+package com.erkan.Commands
 
  
 
-object QueueCommands {
-
-  case class QueueCreateCommand(username: String, password: String,prefix:String)
-  
-  case class QueueClearCommand(username: String, password: String,prefix:String)
+object RabbitMqProxyCommands {
 
   case class QueuePostRabbitMqCommand(username: String, password: String, queueName: String, exprire: Double,deadLettterExchange:String)
   
@@ -19,4 +15,7 @@ object QueueCommands {
   case class QueueDeleteRabbitMqCommand( username: String, password: String,queueName : String)
   
   case class QueueListRabbitMqCommand(username: String, password: String)
+  
+  case class ExchangeDeleteRabbitMqCommand(username: String, password: String,queueName : String)
+  
 }
