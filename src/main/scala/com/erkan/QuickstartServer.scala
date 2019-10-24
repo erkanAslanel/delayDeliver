@@ -15,7 +15,7 @@ object QuickstartServer extends App {
 
   val actor2 = actorSystem.actorOf(Props[QueueRabbitMqProxy], "summingactor")
 
-  actor2 ! QueueCommands.QueuePostRabbitMqCommand("test", "test2", "test3", "test4")
+  actor2 ! QueueCommands.QueuePostRabbitMqCommand("test", "test2", "test3", 10, "test")
 
 }
  
