@@ -250,4 +250,151 @@ class SimpleTest9 extends TestKit(ActorSystem("TestSpec")) with ImplicitSender w
 
 }
 
+class SimpleTest10 extends TestKit(ActorSystem("TestSpec")) with ImplicitSender with WordSpecLike with Matchers with BeforeAndAfterAll {
+
+  override def afterAll {
+
+    super.afterAll()
+    TestKit.shutdownActorSystem(system, duration = 30 seconds)
+  }
+
+  "create rabbitmq proxy" in {
+
+    implicit val materializer: ActorMaterializer = ActorMaterializer()
+    implicit val executionContext = materializer.executionContext
+
+    val proxyActor = system.actorOf(Props(classOf[QueueRabbitMqProxyActor], StandaloneAhcWSClient()), "proxyActor")
+
+    val probe = TestProbe()
+
+    proxyActor ! RabbitMqProxyCommands.ExchangeListRabbitmqCommand("docker", "41594159")
+
+    val actionResult = expectMsgPF(10 seconds) {
+
+      case ExchangeListResult(result: List[String]) => {
+
+        println(result)
+
+        "ok"
+
+      }
+
+    }
+
+    actionResult should equal("ok")
+
+  }
+
+}
+
+class SimpleTest11 extends TestKit(ActorSystem("TestSpec")) with ImplicitSender with WordSpecLike with Matchers with BeforeAndAfterAll {
+
+  override def afterAll {
+
+    super.afterAll()
+    TestKit.shutdownActorSystem(system, duration = 30 seconds)
+  }
+
+  "create rabbitmq proxy" in {
+
+    implicit val materializer: ActorMaterializer = ActorMaterializer()
+    implicit val executionContext = materializer.executionContext
+
+    val proxyActor = system.actorOf(Props(classOf[QueueRabbitMqProxyActor], StandaloneAhcWSClient()), "proxyActor")
+
+    val probe = TestProbe()
+
+    proxyActor ! RabbitMqProxyCommands.ExchangeDeleteRabbitMqCommand("docker", "41594159", "test6")
+
+    expectMsg(OperationResult(true))
+
+  }
+
+}
+
+class SimpleTest12 extends TestKit(ActorSystem("TestSpec")) with WordSpecLike with Matchers with BeforeAndAfterAll {
+
+  override def afterAll {
+
+    super.afterAll()
+    TestKit.shutdownActorSystem(system, duration = 30 seconds)
+  }
+
+  "Queue actor" must {
+
+    "create queue" in {
+
+      implicit val materializer: ActorMaterializer = ActorMaterializer()
+      implicit val executionContext = materializer.executionContext
+
+      val sender = TestProbe()
+
+      val proxyActor = system.actorOf(Props(classOf[QueueRabbitMqProxyActor], StandaloneAhcWSClient()), "proxyActor")
+
+      val child = sender.childActorOf(Props(classOf[QueueServiceActor], proxyActor), "queueCreator")
+
+      sender.expectMsg(30 seconds, OperationResult(true))
+
+    }
+
+  }
+
+}
+
+class SimpleTest13 extends TestKit(ActorSystem("TestSpec")) with WordSpecLike with Matchers with BeforeAndAfterAll {
+
+  override def afterAll {
+
+    super.afterAll()
+    TestKit.shutdownActorSystem(system, duration = 30 seconds)
+  }
+
+  "Queue actor" must {
+
+    "create queue" in {
+
+      implicit val materializer: ActorMaterializer = ActorMaterializer()
+      implicit val executionContext = materializer.executionContext
+
+      val sender = TestProbe()
+
+      val proxyActor = system.actorOf(Props(classOf[QueueRabbitMqProxyActor], StandaloneAhcWSClient()), "proxyActor")
+
+      val child = sender.childActorOf(Props(classOf[QueueServiceActor], proxyActor), "queueCreator")
+
+      sender.send(child, DelayServiceCommands.SetBindingCommand("docker", "41594159", "nsb.delay", 1))
+
+      sender.expectMsg(30 seconds, OperationResult(true))
+
+    }
+
+  }
+
+}
+
+class SimpleTest14 extends TestKit(ActorSystem("TestSpec")) with WordSpecLike with Matchers with BeforeAndAfterAll {
+
+  override def afterAll {
+
+    super.afterAll()
+    TestKit.shutdownActorSystem(system, duration = 30 seconds)
+  }
+
+  "Queue actor" must {
+
+    "create queue" in {
+
+      val route = RoutingCode(28, true)
+      
+      println(route)
+      
+      assert(route == "11100")
+
+    }
+
+  }
+
+}
+
+
 

@@ -197,6 +197,66 @@ class QueueRabbitMqProxyActor(val wsClient: StandaloneAhcWSClient) extends Actor
      
       
     }
+       
+        case RabbitMqProxyCommands.ExchangeListRabbitmqCommand(username: String, password: String)  => {
+      
+      val sender = this.sender() 
+        
+       implicit val reads = Json.reads[ExchangeItem] 
+    
+       val futureResult: Future[JsResult[List[ExchangeItem]]] = wsClient.url("http://10.0.0.157:15672/api/exchanges/%2f/")
+       .withAuth(username, password, WSAuthScheme.BASIC).get().map
+       {
+         response =>  (
+          
+             Json.parse(response.body)).validate[List[ExchangeItem]] 
+       }
+       
+      
+      futureResult.map {
+        
+        response => {
+          
+          response.map {
+            
+            obj => {
+              
+              sender ! ExchangeListResult(obj.map({item => item.name }).toList)
+              
+            }
+            
+          }
+          
+        }
+        
+      }
+    
+      
+    }
+        
+           case RabbitMqProxyCommands.ExchangeDeleteRabbitMqCommand(username: String, password: String,exchangeName : String)  => {
+      
+    
+       val sender = this.sender()    
+            
+
+      wsClient.url("http://10.0.0.157:15672/api/exchanges/%2f/"+exchangeName).withAuth(username, password, WSAuthScheme.BASIC).delete().map { response =>
+
+        val status: Int = response.status
+
+        if (status == 204) {
+
+          sender ! OperationResult(true)
+
+        } else {
+
+          sender ! OperationResult(false)
+
+        }
+
+      } 
+      
+    }
 
     case _ => {
       println("I don't know what are you talking about")

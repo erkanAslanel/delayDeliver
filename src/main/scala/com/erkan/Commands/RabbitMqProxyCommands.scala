@@ -1,5 +1,4 @@
 package com.erkan.Commands
-
  
 
 object RabbitMqProxyCommands {
@@ -17,5 +16,7 @@ object RabbitMqProxyCommands {
   case class QueueListRabbitMqCommand(username: String, password: String)
   
   case class ExchangeDeleteRabbitMqCommand(username: String, password: String,queueName : String)
+  
+  case class ExchangeListRabbitmqCommand(username: String, password: String)
   
 }

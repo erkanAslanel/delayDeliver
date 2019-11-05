@@ -9,6 +9,7 @@ import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.pattern.ask
 import akka.util.Timeout
+import scala.xml.dtd.EMPTY
 
 class QueueServiceActor(proxyActor: ActorRef) extends Actor {
 
@@ -46,7 +47,7 @@ class QueueServiceActor(proxyActor: ActorRef) extends Actor {
         }
 
         println(f"queueName: $queueName%s => expration $expration%2.0f => $deadLetterExchange%s")
-        
+
         sender ! OperationResult(true)
 
       }
@@ -113,11 +114,75 @@ class QueueServiceActor(proxyActor: ActorRef) extends Actor {
         }
 
         println("yaratılan exchange :" + exchangeName)
-        
+
         sender ! OperationResult(true)
 
       }
 
+    }
+
+    case DelayServiceCommands.ExchangeClearCommand(username: String, password: String, prefix: String) => {
+
+      val sender = this.sender()
+      implicit val timeout = Timeout(30 seconds)
+      val future = proxyActor ? RabbitMqProxyCommands.ExchangeListRabbitmqCommand(username, password)
+
+      val actorResult = Await.result(future, timeout.duration).asInstanceOf[ExchangeListResult]
+      println(actorResult.result)
+
+      for (exchangeItem <- actorResult.result) {
+
+        if (exchangeItem.indexOf(prefix) != -1) {
+
+          println("Silinecek exchange:" + exchangeItem)
+
+          val deleteFuture = proxyActor ? RabbitMqProxyCommands.ExchangeDeleteRabbitMqCommand(username, password, exchangeItem)
+
+          val deleteResult = Await.result(deleteFuture, timeout.duration).asInstanceOf[OperationResult]
+
+          println("Silinecek sonucu:" + deleteResult.isSuccess)
+
+          if (!deleteResult.isSuccess) {
+
+            sender ! OperationResult(false)
+
+          }
+
+        }
+      }
+
+      sender ! OperationResult(true)
+
+    }
+
+    case DelayServiceCommands.SetBindingCommand(username: String, password: String, prefix: String, level: Int) => {
+
+      val sender = this.sender()
+
+      val baseExchange = LevelName(prefix, level)
+      val queueName = LevelName(prefix, level)
+      val toExchange = LevelName(prefix, level - 1)
+
+      val routingQueueName = "*.*.*.*.*.*.*.*.*.*.*.*.1.#"
+
+      val routingExchange = "*.*.*.*.*.*.*.*.*.*.*.*.0.#"
+
+      implicit val timeout = Timeout(30 seconds)
+
+      val toQueueFuture = proxyActor ? RabbitMqProxyCommands.BindingToExchangeToQueuePostRabbitMqCommand(username, password, baseExchange, queueName, routingQueueName)
+
+      val toQueueResult = Await.result(toQueueFuture, timeout.duration).asInstanceOf[OperationResult]
+
+      if (toQueueResult.isSuccess == false) {
+
+        sender ! OperationResult(false)
+        return null
+      }
+
+      val toExchangeFuture = proxyActor ? RabbitMqProxyCommands.BindingToExchangeToExchangePostRabbitMqCommand(username, password, baseExchange, toExchange, routingExchange)
+      val toExchangeResult = Await.result(toExchangeFuture, timeout.duration).asInstanceOf[OperationResult]
+
+      sender ! toExchangeResult
     }
 
     case _ => { println("I don't know what are you talking about") }

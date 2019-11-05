@@ -9,4 +9,7 @@ object DelayServiceCommands {
   case class ExchangeCreateCommand(username: String, password: String,prefix:String)
   
    case class ExchangeClearCommand(username: String, password: String,prefix:String)
+   
+   case class SetBindingCommand(username: String, password: String,prefix:String,level:Int)
+   
 }
