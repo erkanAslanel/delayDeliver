@@ -12,4 +12,8 @@ object DelayServiceCommands {
    
    case class SetBindingCommand(username: String, password: String,prefix:String,level:Int)
    
+   case class SetBindingAllCommand(username: String, password: String,prefix:String)
+   
+    case class SendDelayedMessage(username: String, password: String,prefix:String,endQueue:String,body:String,expire:Int)    
+    
 }

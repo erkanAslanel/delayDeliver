@@ -257,6 +257,36 @@ class QueueRabbitMqProxyActor(val wsClient: StandaloneAhcWSClient) extends Actor
       } 
       
     }
+           
+    case RabbitMqProxyCommands.ExchangePublishMessage(username: String, password: String,exchangeName: String,routingKey:String,payload:String) => {
+      
+    
+       val sender = this.sender()    
+            
+          val data = Json.obj(
+        "routing_key" -> routingKey,
+         "payload" -> payload,
+           "payload_encoding" -> "string",
+           "properties" -> Json.obj()   
+     )
+
+      wsClient.url("http://10.0.0.157:15672/api/exchanges/%2f/"+exchangeName+"/publish").withAuth(username, password, WSAuthScheme.BASIC).post(data).map { response =>
+
+        val status: Int = response.status
+
+        if (status == 200) {
+
+          sender ! OperationResult(true)
+
+        } else {
+
+          sender ! OperationResult(false)
+
+        }
+
+      } 
+      
+    }
 
     case _ => {
       println("I don't know what are you talking about")

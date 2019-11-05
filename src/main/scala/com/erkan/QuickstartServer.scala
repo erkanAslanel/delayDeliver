@@ -6,6 +6,10 @@ import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.actor.Props
 import akka.actor.ActorSystem
+import play.api.libs.ws._
+import play.api.libs.ws.ahc.StandaloneAhcWSClient
+import akka.pattern.ask
+import akka.util.Timeout
 
 object QuickstartServer extends App {
 
@@ -13,9 +17,11 @@ object QuickstartServer extends App {
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContext = actorSystem.dispatcher
 
-   val actor2 = actorSystem.actorOf(Props[com.erkan.QueueRabbitMqProxyActor], "summingactor")
+  val proxyActor = actorSystem.actorOf(Props(classOf[QueueRabbitMqProxyActor], StandaloneAhcWSClient()), "proxyActor")
 
-   actor2 ! RabbitMqProxyCommands.QueuePostRabbitMqCommand("test", "test2", "test3", 10, "test")
+  val actor = actorSystem.actorOf(Props(classOf[QueueServiceActor], proxyActor), "service")
+
+  actor ! DelayServiceCommands.QueueCreateCommand("docker", "41594159", "nsb.delay")
 
 }
  

@@ -19,4 +19,6 @@ object RabbitMqProxyCommands {
   
   case class ExchangeListRabbitmqCommand(username: String, password: String)
   
+  case class ExchangePublishMessage(username: String, password: String,exchangeName: String,routingKey:String,payload:String)
+  
 }
